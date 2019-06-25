@@ -7,7 +7,7 @@ function setup() {
   colorMode(HSB);
 
   createP("Radius");
-  rSlider = createSlider(100, 250, 230, 10);
+  rSlider = createSlider(200, 450, 250, 10);
   createP("Divisions");
   divSlider = createSlider(10, 500, 200, 100);
   createP("Multiplier");
@@ -26,11 +26,12 @@ function setup() {
 
 function draw() {
   let r = rSlider.value();
-  let divisions = divSlider.value();
+  // let divisions = divSlider.value();
+  let divisions = 200;
   // let divisions = millis() / 250;
   // divisions = constrain(divisions, 0, 100);
-  let multiplier = multSlider.value();
-  // let multiplier = millis() / 1000;
+  // let multiplier = multSlider.value();
+  let multiplier = millis() / 1000;
 
   background(bckHueSlider.value(), bckSatSlider.value(), bckBrgSlider.value());
   stroke(lineHueSlider.value(), lineSatSlider.value(), lineBrgSlider.value(), 10);
